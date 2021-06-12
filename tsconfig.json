@@ -19,7 +19,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@styles/*": ["ui/styles/*"]
+      "@styles/*": ["ui/styles/*"],
+      "@components/*": ["ui/components/*"]
     }
   },
   "include": [
