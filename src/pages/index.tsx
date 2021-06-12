@@ -4,8 +4,11 @@ import UserInformation from "@components/data-display/UserInformation/UserInform
 import TextFieldMask from "@components/inputs/TextFieldMask/TextFieldMask";
 import { Button, Typography, Container } from "@material-ui/core";
 import { FormElementsContainer, ProfissionaisPaper, ProfissionaisContainer } from "@styles/pages/index.style";
+import useIndex from 'data/hooks/pages/useIndex.page';
 
 export default function Home() {
+  const { cep, setCep } = useIndex();
+
   return (
     <div>
       <SafeEnvironment />
@@ -24,6 +27,8 @@ export default function Home() {
             label={'Digite seu CEP'}
             fullWidth
             variant={'outlined'}
+            value={cep}
+            onChange={(event) => setCep(event.target.value)}
           />
           <Typography
             color={'error'}
