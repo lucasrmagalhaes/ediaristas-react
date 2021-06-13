@@ -7,7 +7,7 @@ import { FormElementsContainer, ProfissionaisPaper, ProfissionaisContainer } fro
 import useIndex from 'data/hooks/pages/useIndex.page';
 
 export default function Home() {
-  const { cep, setCep } = useIndex();
+  const { cep, setCep, cepValido } = useIndex();
 
   return (
     <div>
@@ -30,10 +30,10 @@ export default function Home() {
             value={cep}
             onChange={(event) => setCep(event.target.value)}
           />
+          
           <Typography
             color={'error'}
           >
-            CEP inválido
           </Typography>
           <Button
             variant={'contained'}
