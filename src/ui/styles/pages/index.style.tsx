@@ -14,12 +14,6 @@ export const ProfissionaisPaper = styled(Paper)`
     padding: ${({theme}) => theme.spacing(7)};
     margin: 0 auto ${({theme}) => theme.spacing(10)};
 
-    ${({theme}) => theme.breakpoints.up('md')} {
-        &.MuiPaper-root {
-            box-shadow: none;
-        }
-    }
-
     ${({theme}) => theme.breakpoints.down('md')} {
         &.MuiPaper-root {
             padding: 0;
